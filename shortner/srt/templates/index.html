@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Description" CONTENT="Author: A.N. Ajib Roziq">
+        <meta name="Keyword" CONTENT="glassmorphsim, form, NEOMORPHISM, gradient">
+        <meta name="robots" content="noindex,nofollow">
+        <title>Index</title>
+        <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous"
+      />
+      <script
+        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"
+      ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper-form {
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  overflow: hidden;
+  position: relative;
+  filter: url(#gooey);
+}
+.wrapper-form span.circle {
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 20vmin;
+  backface-visibility: hidden;
+  position: absolute;
+  animation-name: move;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.wrapper-form span.circle:nth-child(1) {
+  color: #FFACAC;
+  top: 17%;
+  left: 39%;
+  animation-duration: 10.5s;
+  animation-delay: -10.5s;
+  transform-origin: -1vw -24vh;
+  box-shadow: 40vmin 0 5.6454722753vmin currentColor;
+}
+.wrapper-form span.circle:nth-child(2) {
+  color: #E45A84;
+  top: 47%;
+  left: 56%;
+  animation-duration: 14.7s;
+  animation-delay: -14s;
+  transform-origin: -6vw 3vh;
+  box-shadow: -40vmin 0 6.0542475496vmin currentColor;
+}
+.wrapper-form span.circle:nth-child(3) {
+  color: #E45A84;
+  top: 62%;
+  left: 25%;
+  animation-duration: 13.1s;
+  animation-delay: -4.8s;
+  transform-origin: 17vw 1vh;
+  box-shadow: -40vmin 0 9.681604088vmin currentColor;
+}
+.wrapper-form span.circle:nth-child(4) {
+  color: #E45A84;
+  top: 50%;
+  left: 30%;
+  animation-duration: 12.8s;
+  animation-delay: -4.2s;
+  transform-origin: 22vw -2vh;
+  box-shadow: -40vmin 0 10.4899323888vmin currentColor;
+}
+.wrapper-form span.circle:nth-child(5) {
+  color: #E45A84;
+  top: 62%;
+  left: 51%;
+  animation-duration: 14.4s;
+  animation-delay: -12.2s;
+  transform-origin: -6vw -1vh;
+  box-shadow: -40vmin 0 13.4514364654vmin currentColor;
+}
+.wrapper-form span.circle:nth-child(6) {
+  color: #E45A84;
+  top: 5%;
+  left: 28%;
+  animation-duration: 12.4s;
+  animation-delay: -9.6s;
+  transform-origin: -13vw 5vh;
+  box-shadow: -40vmin 0 10.5344583498vmin currentColor;
+}
+.wrapper-form span.circle:nth-child(7) {
+  color: #583C87;
+  top: 19%;
+  left: 6%;
+  animation-duration: 13.3s;
+  animation-delay: -1.7s;
+  transform-origin: -7vw 2vh;
+  box-shadow: -40vmin 0 7.0654045279vmin currentColor;
+}
+.wrapper-form span.circle:nth-child(8) {
+  color: #FFACAC;
+  top: 4%;
+  left: 58%;
+  animation-duration: 11.2s;
+  animation-delay: -11s;
+  transform-origin: 15vw 6vh;
+  box-shadow: 40vmin 0 10.5814109726vmin currentColor;
+}
+.wrapper-form span.circle:nth-child(9) {
+  color: #583C87;
+  top: 64%;
+  left: 27%;
+  animation-duration: 12.2s;
+  animation-delay: -13.2s;
+  transform-origin: 18vw 25vh;
+  box-shadow: 40vmin 0 11.7703277304vmin currentColor;
+}
+.wrapper-form span.circle:nth-child(10) {
+  color: #583C87;
+  top: 25%;
+  left: 49%;
+  animation-duration: 10.2s;
+  animation-delay: -1.3s;
+  transform-origin: 6vw -23vh;
+  box-shadow: -40vmin 0 7.869543868vmin currentColor;
+}
+
+.card-glass {
+  position: relative;
+  width: 944px;
+  background: radial-gradient(100.21% 271.27% a t 2.81% 7.08%, rgba(255, 252, 252, 0.3) 0%, rgba(250, 250, 250, 0.07) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  box-shadow: 30px 20px 70px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(50px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+  align-items: center;
+  flex-direction: column;
+}
+@media screen and (max-width: 678px) {
+  .card-glass {
+    margin: 20px;
+    width: 100%;
+  }
+}
+
+.card-glass-header {
+    position: absolute;
+   top:5px;
+  width: 100%;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 30px 30px 30px 30px;
+  display: flex;
+  align-items: center;
+  
+}
+
+.form-glass-group {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0 35px;
+}
+
+.card-glass-footer {
+  width: 100%;
+  height: 70px;
+  border-radius: 0px 0px 30px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.glass-header-text {
+  font-weight: 600;
+  font-size: 2em;
+  color: #6777EF;
+}
+
+.glass-footer-text {
+  font-weight: 400;
+  font-size: 1em;
+  color: white;
+}
+
+svg.gooey {
+  width: 0;
+  height: 0;
+}
+
+input.form-glass-control {
+  padding: 13px 16px;
+  border: none;
+  max-width: 100%;
+  outline: none;
+  font-size: 1.2em;
+  color: rgb(238, 13, 137);
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1), 0px -2px 5px rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  margin: 15px auto;
+}
+input.form-glass-control::placeholder {
+  font-size: 0.7em;
+  color: white;
+}
+.linkbar{
+  padding: 13px 16px;
+  border: none;
+  max-width: 85%;
+  outline: none;
+  font-size: 1.0em;
+  color: white;
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1), 0px -2px 5px rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  margin: 15px auto;
+}
+
+.show-hide-toggle {
+  position: absolute;
+  font-size: 0.8em;
+  z-index: 2;
+  right: 33%;
+  background: rgba(255, 255, 255, 0.09);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1), 0px -2px 5px rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  color: #6777EF;
+  font-weight: 600;
+}
+@media only screen and (max-width: 500px) {
+  .show-hide-toggle {
+    right: 10%;
+  }
+  input.form-glass-control {
+    width: 150px;
+  }
+}
+
+.glass-container {
+  margin: 20px 40px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: white;
+  margin: 13px 7px;
+  display: inline-block;
+}
+
+.btn-primary {
+  color: white;
+  background-color: #6777EF;
+  margin-left: 33px;
+  text-decoration: none;
+}
+
+@keyframes background {
+  0%, 100% {
+    background-image: hue-rotate(90deg);
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+}
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+.dropbtn {
+  background-color: #4caf4f00;
+  color: rgb(253, 2, 190);
+  left: 10px;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.drop_button {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background-color: white; 
+  border: none;
+}
+
+.drop_button:hover { background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.header {
+  padding-right: 3vw;
+  padding-left: 3vw;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  text-align: center;
+  background: #fc04a963;
+  border-radius: 12px;
+  
+}
+.typing-text{
+  font-weight: 400;
+  font-size: 1em;
+  color: rgb(135, 0, 245);
+}
+.linkspace{
+  margin-right: vw;
+}
+.input-group-button{
+   margin-top: -23px;
+   margin-right: -10px;
+  float: right;
+}
+
+</style>
+</head>
+  <body>      
+    <!-- sign-in modal  -->
+  <div
+    class="modal fade"
+    id="signupModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="signupModal"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5
+            style="
+              font-family: Georgia, 'Times New Roman', Times, sans-serif;
+              color: #17202a;
+            "
+            class="modal-title"
+            id="signupModalTitle"
+          >
+            C-url Registration
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="/signup/" method="post">
+            <div class="form-group">
+              <label
+                style="
+                  font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                  color: #17202a;
+                "
+                for="username"
+                >Username</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                name="username"
+                placeholder="Choose a unique Username..."
+              />
+            </div>
+            <div class="form-group">
+              <label
+                style="
+                  font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                  color: #17202a;
+                "
+                for="fname"
+                >First Name</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="fname"
+                name="fname"
+                placeholder="Your First Name Here..."
+              />
+            </div>
+            <div class="form-group">
+              <label
+                style="
+                  font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                  color: #17202a;
+                "
+                for="lname"
+                >Last Name</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="lname"
+                name="lname"
+                placeholder="Your Last Name Here..."
+              />
+            </div>
+            <div class="form-group">
+              <label
+                style="
+                  font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                  color: #17202a;
+                "
+                for="email"
+                >Email</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Your Email Here..."
+              />
+            </div>
+            <div class="form-group">
+              <label
+                style="
+                  font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                  color: #17202a;
+                "
+                for="pass1"
+                >Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="pass1"
+                name="pass1"
+                placeholder=" Your Password Here..."
+              />
+            </div>
+            <div class="form-group">
+              <label
+                style="
+                  font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                  color: #17202a;
+                "
+                for="pass2"
+                >Confrim Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="pass2"
+                name="pass2"
+                placeholder="Confirm Your Password Here..."
+              />
+            </div>
+
+            {% csrf_token %}
+            <button
+              style="
+                font-family: Georgia, 'Times New Roman', Times, sans-serif;
+              "
+              type="submit"
+              class="btn btn-outline-dark"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Login Modal -->
+  <div
+    class="modal fade"
+    id="loginModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="loginModal"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5
+            style="
+              font-family: Georgia, 'Times New Roman', Times, sans-serif;
+              color: #17202a;
+            "
+            class="modal-title"
+            id="loginModalTitle"
+          >
+            C-url Login
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="/login/" method="post">
+            <div class="form-group">
+              <label
+                style="
+                  font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                  color: #17202a;
+                "
+                for="username"
+                >Username</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="loginusername"
+                name="loginusername"
+                placeholder="Enter Your Username Here..."
+              />
+            </div>
+            <div class="form-group">
+              <label
+                style="
+                  font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                  color: #17202a;
+                "
+                for="pass"
+                >Enter Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="loginpassword"
+                name="loginpassword"
+                placeholder=" Enter Your Password Here..."
+              />
+            </div>
+            {% csrf_token %}
+            <button type="submit" class="btn btn-outline-dark">Submit</button>
+            <h1></h1>
+            <h6>Dont have an account?</h6>
+            <li class="nav-item dropdown">
+              <a
+                style="
+                  font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                "
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Signup
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a
+                  style="
+                    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                  "
+                  class="dropdown-item"
+                  data-toggle="modal"
+                  data-target="#signupModal"
+                  >Signup</a
+                >
+              </div>
+            </li>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        <!-- NEOMORPHISM INPUT -->
+        <div class="wrapper-form">
+          <span class="circle"></span>
+          <span class="circle"></span>
+          <span class="circle"></span>
+          <span class="circle"></span>
+          <span class="circle"></span>
+          <span class="circle"></span>
+          <span class="circle"></span>
+          <span class="circle"></span>
+          <span class="circle"></span>
+          <span class="circle"></span>
+
+    <div class="card-glass-header">
+      <div style="margin-left: 3vw;"><a class="navbar-brand" href="#">C-url</a></div>
+          <div class="dropdown">
+             {% if user.is_authenticated %}
+                <button class="dropbtn">welcome {{request.user}}</button>
+                <div class="dropdown-content">
+                <div>
+                  <form method="get" action="/dashboard/">
+                    <input
+                      type="hidden"
+                      name="usertracker"
+                      id="usertracker"
+                      value="{{request.user}}"
+                    />
+                    <button class="drop_button "  type="submit"  style="width: 100%;border-radius: 0px;">
+                      Dashboard
+                    </button>
+                  </form>
+                  </div>
+                  <a href="/logout">log out</a>
+                  <a href="/p">Premium</a>
+              {% else %}
+                <button class="dropbtn">Login</button>
+                <div class="dropdown-content">
+                <a data-toggle="modal" data-target="#loginModal">User</a>
+                <a href="/admin">Admin</a>
+                <a   data-toggle="modal" data-target="#signupModal">sign up</a>
+             {% endif %}
+            </div>
+          </div>
+          
+            
+    </div>
+      <div class="card-glass">
+            
+            <div class="glass-container">
+                          
+              <div class="header">
+                <h1 style=" color: rgb(248, 6, 66);font-size:max(6vw,70px);" ><b> C-url</b></h1>
+                <p style=" color: white;font-size: max(2vw,25px);;" >Short your url here</p>
+                <p style=" color: rgb(19, 0, 49);font-size: 15x;" >We can store 14,776,336 urls</p>
+
+              </div>
+              
+              <div class="form-glass-group">
+                <form action="/db/" method="post">
+                  {% csrf_token %}
+                <input type="text" class="form-glass-control" id="linksub" name="linksub" placeholder="Enter url here">
+                <input class="btn btn btn-primary" type="submit" value="shorten" name="shorten"  />
+                <!-- <a href="#"  type="submit" value="search" name="search" ></a> -->
+                </form>
+              </div>
+            
+              <div class="linkbar"> shorten link :<span id="surl"  class="linkspace"  style="color: tomato;">{{id}}</span> <span class="input-group-button">      <button class="btn" type="button" onclick="copyToClipboard('#surl')">        <img class="clippy" src="https://clipboardjs.com/assets/images/clippy.svg" width="13" alt="Copy to clipboard" style="  background-color: rgba(245, 222, 179, 0);">      </button>    </span></div>
+
+            <div class="card-glass-footer">
+              <div class="glass-footer-text">Already have accout ? <a href="#" class="custom-glass-link"  data-toggle="modal" data-target="#loginModal">Sign In!</a></div>
+            </div>
+      
+          </div>
+          <h3><span class="typing-text">sign in to our website</span></h3>
+          
+          <svg class="gooey">
+            <filter id="gooey">
+              <feGaussianBlur in="SourceGraphic" stdDevitaton="10" />
+              <feColorMatrix values="
+              1 0 0 0 0
+              0 1 0 0 0
+              0 0 1 0 0
+              0 0 0 20 -10      
+              " />
+            </filter>
+          </svg>
+        </div>
+        
+      </body>
+  </body>
+</html>
+<script>
+   // Background custom by me from pen https://codepen.io/Mamboleoo/pen/BxMQYQ
+
+const password = document.getElementById('password');
+    const toggleShowHide = document.querySelector('.show-hide-toggle');
+
+    function showHide() {
+      if (password.type === 'password') {
+        password.setAttribute('type', 'text');
+        toggleShowHide.innerHTML = "Hide"
+      } else {
+        password.setAttribute('type', 'password');
+        toggleShowHide.innerHTML = "Show"
+      }
+    }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+
+<script>
+
+    var type = new Typed('.typing-text',{
+        strings : [ 'Upgrade your experience','sign in to our website','more premium features',' create custom links','more fromal links',  ' more awesome UI', ' access all your' ,'urls through dashboard' ],
+        typeSpeed: 120,
+        loop:true
+    });
+
+</script>
+<script>
+let duration = 0.8;
+let delay = 0.3;
+let revealText = document.querySelector(".reveal");
+let letters = revealText.textContent.split("");
+revealText.textContent = "";
+
+let middle = letters.filter(e => e !== " ").length / 2;
+
+letters.forEach((letter, i) => {
+  let span = document.createElement("span");
+  span.textContent = letter;
+  span.style.animationDelay = `${delay + Math.abs(i - middle) * 0.1}s`;
+  revealText.append(span);
+})
+</script>
+<script>
+  function copyToClipboard(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+      }
+</script>

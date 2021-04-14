@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+     <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous"
+      />
+      <script
+        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"
+      ></script>
+    <style>
+      body,
+      html {
+        background-color: #ebecf0;
+      }
+
+      body,
+      p,
+      input,
+      select,
+      textarea,
+      button {
+        font-family: "Montserrat", sans-serif;
+        letter-spacing: -0.2px;
+        font-size: 16px;
+      }
+
+      div,
+      p {
+        color: #babecc;
+        text-shadow: 1px 1px 1px #fff;
+      }
+
+      .midpos  form {
+        box-sizing: border-box;
+        padding: 16px;
+        width: 80vw;
+        margin: 0 auto;
+      }
+
+      .segment {
+        padding: 32px 0;
+        text-align: center;
+      }
+
+      .midpos  input {
+        border: 0;
+        outline: 0;
+        font-size: 16px;
+        border-radius: 320px;
+        padding: 16px;
+        background-color: #ebecf0;
+        text-shadow: 1px 1px 0 #fff;
+      }
+      button{
+        border: 0;
+        outline: 0;
+        font-size: 16px;
+        border-radius: 320px;
+        padding: 16px;
+        background-color: #ebecf0;
+        text-shadow: 1px 1px 0 #fff;
+      }
+
+      .midpos  label {
+        display: border-box;
+        margin-bottom: 24px;
+        width: 100%;
+      }
+
+      .midpos input {
+        margin-right: 8px;
+        box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+        width: 69%;
+        box-sizing: border-box;
+        transition: all 0.2s ease-in-out;
+        appearance: none;
+        -webkit-appearance: none;
+      }
+      .midpos input:focus {
+        box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+      }
+
+      button {
+        color: #61677c;
+        font-weight: bold;
+        box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        font-weight: 600;
+      }
+      button:hover {
+        box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+      }
+      button:active {
+        box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+      }
+      button .icon {
+        margin-right: 8px;
+      }
+      button.unit {
+        border-radius: 8px;
+        line-height: 0;
+        width: 48px;
+        height: 48px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 8px;
+        font-size: 19.2px;
+      }
+      button.unit .icon {
+        margin-right: 0;
+      }
+      button.red {
+        position: absolute;
+        top: 250px;
+        box-sizing: border-box;
+        width: 46%;
+        
+      }
+
+      .input-group {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      .input-group label {
+        margin: 0;
+        flex: 1;
+      }
+          
+    .card-glass-header {
+        position: fixed;
+        top:15px;
+        width: 95vw;
+        left:50%;
+        transform: translate(-50%);
+        height: 70px;
+        color: #61677c;
+        background-color: rgb(236, 235, 235);
+        font-weight: bold;
+        border-radius: 30px 30px 30px 30px;
+        box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        font-weight: 600;
+        z-index: 1;
+    }
+    .midpos{
+      position: absolute;
+      top:10%;
+      left:50%;
+      transform: translate(-50%);
+
+    }
+  .copybutton{
+    position: absolute;
+    transform: translate(-0%,-50%);
+    right: 40px ;
+    margin-right: -22px ;
+    background-color: rgba(225, 133, 248, 0.911);
+    border-radius: 50%;
+  }
+.dropbtn {
+  background-color: #4caf4f00;
+  color: rgb(253, 2, 190);
+  left: 10px;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.drop_button {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background-color: white; 
+  border: none;
+}
+
+.drop_button:hover { background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.header {
+  padding-right: 3vw;
+  padding-left: 3vw;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  text-align: center;
+  background: #fc04a963;
+  border-radius: 12px;
+  
+}
+#lgin{
+  position: absolute;
+  top: 8px;
+  left: 105px;
+}
+#navbnd{
+  position: absolute;
+  top: 14px;
+  left: 18px;
+  
+}
+.linkbar{
+  padding: 13px 16px;
+  border: none;
+  max-width: 100%;
+  outline: none;
+  border-radius: 30px;
+  font-size: 1.0em;
+  color: white;
+  color: #61677c;
+  font-weight: bold;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 600;
+  margin: 25px auto;
+}
+
+table {
+  border-collapse:separate ;
+  width: 100%;
+}
+
+th, td {
+  text-align: center;
+  padding: 13px 16px;
+  
+  
+}
+.biglink{
+  width:50vw;
+  height: 20px;
+  overflow: hidden;
+  
+}
+.biglink2{
+  width: 20vw;
+  height: 15px;
+  overflow: hidden;
+  
+}
+tr:nth-child(even){background-color: hsl(347, 76%, 87%)}
+tr:nth-child(odd){background-color: hsl(0, 0%, 100%)}
+
+th {
+  background-color: rgba(216, 95, 235, 0.842);
+  color: rgb(0, 0, 7);
+  padding: 13px 16px;
+  border: 5px white;
+  outline: none;
+  font-size: 1.0em;
+  color: rgb(2, 2, 27);
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 600;
+  margin: 10px; 
+} 
+.footer {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 150px;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Taller footer on small screens */
+@media (max-width: 567em) {
+    
+    .footer {
+      height: 280px;
+    }
+}
+
+/* Sticky footer style and color
+-------------------------------------------------- */
+footer {
+  margin-top: 200px;
+  padding-top: 30px;
+  background-color: #ac2ff5b2;
+  color: rgb(219, 2, 122);
+  border-radius: 30px;
+  font-size: 18px;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  transition: all 0.2s ease-in-out;
+}
+
+footer a {
+  color: rgb(5, 0, 48);
+  text-decoration:none;
+}
+
+footer a:hover, footer a:focus {
+  color: rgb(154, 10, 221);
+  text-decoration:none;
+  border-bottom:1px dotted #999;
+}
+
+footer .form-control {
+    background-color: #e6ebf7;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    width: 40%;
+    border: none;
+    resize: none;
+    color: #011f1f;
+    padding: 0.7em 1em;
+}
+.sendbutton{
+  background-color: tomato;
+  border-radius: 10px;
+  box-shadow:none;
+  color: thistle;
+
+}
+.sendbutton:hover{
+  background-color: rgb(255, 249, 248);
+  color: rgb(226, 9, 74);
+}
+
+    </style>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- sign-in modal  -->
+    <div
+      class="modal fade"
+      id="signupModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="signupModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5
+              style="
+                font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                color: #17202a;
+              "
+              class="modal-title"
+              id="signupModalTitle"
+            >
+              C-url Registration
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="/signup/" method="post">
+              <div class="form-group">
+                <label
+                  style="
+                    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                    color: #17202a;
+                  "
+                  for="username"
+                  >Username</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  name="username"
+                  placeholder="Choose a unique Username..."
+                />
+              </div>
+              <div class="form-group">
+                <label
+                  style="
+                    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                    color: #17202a;
+                  "
+                  for="fname"
+                  >First Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fname"
+                  name="fname"
+                  placeholder="Your First Name Here..."
+                />
+              </div>
+              <div class="form-group">
+                <label
+                  style="
+                    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                    color: #17202a;
+                  "
+                  for="lname"
+                  >Last Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lname"
+                  name="lname"
+                  placeholder="Your Last Name Here..."
+                />
+              </div>
+              <div class="form-group">
+                <label
+                  style="
+                    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                    color: #17202a;
+                  "
+                  for="email"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email Here..."
+                />
+              </div>
+              <div class="form-group">
+                <label
+                  style="
+                    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                    color: #17202a;
+                  "
+                  for="pass1"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="pass1"
+                  name="pass1"
+                  placeholder=" Your Password Here..."
+                />
+              </div>
+              <div class="form-group">
+                <label
+                  style="
+                    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                    color: #17202a;
+                  "
+                  for="pass2"
+                  >Confrim Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="pass2"
+                  name="pass2"
+                  placeholder="Confirm Your Password Here..."
+                />
+              </div>
+
+              {% csrf_token %}
+              <button
+                style="
+                  font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                "
+                type="submit"
+                class="btn btn-outline-dark"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="loginModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5
+              style="
+                font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                color: #17202a;
+              "
+              class="modal-title"
+              id="loginModalTitle"
+            >
+              C-url Login
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="/login/" method="post">
+              <div class="form-group">
+                <label
+                  style="
+                    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                    color: #17202a;
+                  "
+                  for="username"
+                  >Username</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="loginusername"
+                  name="loginusername"
+                  placeholder="Enter Your Username Here..."
+                />
+              </div>
+              <div class="form-group">
+                <label
+                  style="
+                    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                    color: #17202a;
+                  "
+                  for="pass"
+                  >Enter Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="loginpassword"
+                  name="loginpassword"
+                  placeholder=" Enter Your Password Here..."
+                />
+              </div>
+              {% csrf_token %}
+              <button type="submit" class="btn btn-outline-dark">Submit</button>
+              <h1></h1>
+              <h6>Dont have an account?</h6>
+              <li class="nav-item dropdown">
+                <a
+                  style="
+                    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                  "
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Signup
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a
+                    style="
+                      font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                    "
+                    class="dropdown-item"
+                    data-toggle="modal"
+                    data-target="#signupModal"
+                    >Signup</a
+                  >
+                </div>
+              </li>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-glass-header">
+      <div id="navbnd"><a class="navbar-brand" href="#">C-url</a></div>
+          <div class="dropdown" id="lgin">
+                {% if user.is_authenticated %}
+                <button class="dropbtn">welcome {{request.user}}</button>
+                <div class="dropdown-content">
+                <div>
+                  <form method="get" action="/p">
+                    <input
+                      type="hidden"
+                      name="usertracker"
+                      id="usertracker0"
+                      value="{{request.user}}"
+                    />
+                    <button class="drop_button "  type="submit" style="width: 100%;border-radius: 0px;" >
+                      Home
+                    </button>
+                  </form>
+                  </div>
+                  <a href="/logout">log out</a>
+                   {% else %}
+                <button class="dropbtn">Login</button>
+                <div class="dropdown-content">
+                <a data-toggle="modal" data-target="#loginModal">User</a>
+                <a href="/admin">Admin</a>
+                <a   data-toggle="modal" data-target="#signupModal">sign up</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="midpos">
+      <div class="segment">
+        <h1 style="font-size: 80px;color: rgba(226, 2, 151, 0.473);" ><b>C-url</b></h1>
+        <h3 style="color: rgba(243, 44, 9, 0.658);">Short your url here</h3>
+        <h5 style="color: rgba(37, 37, 37, 0.507);"> We can store 14,776,336 urls</h5>
+      </div>
+      <div>
+      <label>
+        <form method="get" action="/dashboard/">
+            <input
+              type="hidden"
+              name="usertracker"
+              id="usertracker1"
+              value="{{request.user}}"
+            />
+            <button class="red active" style="left: 1vh;color: #7d00ae;" type="submit" >
+              Normal url
+            </button>
+       </form>
+         <form method="get" action="/customdashboard/">
+            <input
+              type="hidden"
+              name="usertracker"
+              id="usertracker2"
+              value="{{request.user}}"
+            />
+            <button class="red" style="right: 1vh;color: #ae1100;"  type="submit" >
+              Custom url
+            </button>
+        </form>
+        </label>
+      </div>
+ 
+      <div class="segment">
+        <h3 style="color: rgba(2, 120, 255, 0.658);">{{request.user}},all your shorten urls are here</h3>
+      </div>
+<table >
+  <tr>
+    <th style="width: 10%;border-radius: 30px 0px 0px 30px ;" >No.</th>
+    <th  style="width: 40%;" >Link</th>
+    <th style="border-radius: 0px 30px 30px 0px ;">shorten url</th>
+  </tr>
+  {% for i in table %}
+  <tr style="margin-top:15px;" >
+    <td   style="width: 10%;border-radius: 30px 0px 0px 30px ;color: rgb(59, 5, 95);" >{{i.0}}</th>
+    <td  style="width: 40%;" ><div class="biglink"><a href="{{i.2}}" style="color: rgb(143, 3, 50);">{{i.2}} </a></div></th>
+    <td style="border-radius: 0px 30px 30px 0px ;"> <div class="biglink2"></div><a href="{{i.2}}">{{i.1}}</a></div>
+      <span class="input-group-button">  
+      <button class="btn copybutton" type="button" onclick="copyToClipboard('{{i.1}}')" >       
+        <img class="clippy" src="https://clipboardjs.com/assets/images/clippy.svg" width="13" alt="Copy to clipboard" >     
+        </button>  
+      </span> 
+    </td>
+  </tr>
+  {% endfor %}
+
+
+
+</table>
+
+<footer class="footer">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-5">
+              <h2 style="color: rgb(250, 0, 54);"><i class="fa fa-road"></i>C-url.</h2>
+              <div class="row">
+                  <div class="col-6">
+                      <ul class="list-unstyled">
+                          <li><a href="">Product</a></li>
+                          <li><a href="">Benefits</a></li>
+                          <li><a href="">Partners</a></li>
+                          <li><a href="">Team</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-6">
+                      <ul class="list-unstyled">
+                          <li><a href="">Documentation</a></li>
+                          <li><a href="">Support</a></li>
+                          <li><a href="">Legal Terms</a></li>
+                          <li><a href="">About</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <ul class="nav">
+                  <li class="nav-item"><a href="" class="nav-link pl-0"><i class="fa fa-facebook fa-lg"></i></a></li>
+                  <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
+                  <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-github fa-lg"></i></a></li>
+                  <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
+              </ul>
+              <br>
+          </div>
+          <div class="col-md-2">
+              <h5 class="text-md-right"  style="color: rgb(250, 0, 54);">Contact Us</h5>
+              <hr>
+          </div>
+          <div class="col-md-5">
+              <form>
+                  <fieldset class="form-group">
+                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                  </fieldset>
+                  <fieldset class="form-group">
+                      <textarea class="form-control" id="exampleMessage" placeholder="Message"></textarea>
+                  </fieldset>
+                  <fieldset class="form-group text-xs-right">
+                      <button type="button" class="sendbutton"   >Send</button>
+                  </fieldset>
+              </form>
+          </div>
+      </div>
+  </div>
+</footer>
+
+</div>
+
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    
+    <script>
+      function copyToClipboard(element) {
+        var $temp = $("<input>");
+        console.log(String(element));
+        $("body").append($temp);
+        $temp.val(String(element)).select();
+        document.execCommand("copy");
+        $temp.remove();
+        alert("successfully copied "+String(element)+" to clipboard" );
+      }
+    </script>
+  </body>
+</html>

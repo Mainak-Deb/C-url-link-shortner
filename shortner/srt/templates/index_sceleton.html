@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=Home, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #999999;
+        font-family: "Oswald", sans-serif;
+      }
+      p {
+        color: #000000;
+        font-size: 20px;
+      }
+
+      .textBox {
+        height: 30px;
+        width: 300px;
+      }
+
+      button {
+        height: 30px;
+        width: 150px;
+        border-radius: 8px;
+        padding: 10px;
+        font-size: 20px;
+        font-family: "Oswald", sans-serif;
+        height: 52px;
+        cursor: pointer;
+        background-color: wheat;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Trigger -->
+
+    <div
+      class="modal fade"
+      id="signupModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="signupModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5
+              style="
+                font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                color: #17202a;
+              "
+              class="modal-title"
+              id="signupModalTitle"
+            >
+              Papyrus Registration
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="/signup/" method="post">
+              <div class="form-group">
+                <label
+                  style="
+                    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                    color: #17202a;
+                  "
+                  for="username"
+                  >Username</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  name="username"
+                  placeholder="Choose a unique Username..."
+                />
+              </div>
+              <div class="form-group">
+                <label
+                  style="
+                    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                    color: #17202a;
+                  "
+                  for="fname"
+                  >First Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fname"
+                  name="fname"
+                  placeholder="Your First Name Here..."
+                />
+              </div>
+              <div class="form-group">
+                <label
+                  style="
+                    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                    color: #17202a;
+                  "
+                  for="lname"
+                  >Last Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lname"
+                  name="lname"
+                  placeholder="Your Last Name Here..."
+                />
+              </div>
+              <div class="form-group">
+                <label
+                  style="
+                    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                    color: #17202a;
+                  "
+                  for="email"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email Here..."
+                />
+              </div>
+              <div class="form-group">
+                <label
+                  style="
+                    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                    color: #17202a;
+                  "
+                  for="pass1"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="pass1"
+                  name="pass1"
+                  placeholder=" Your Password Here..."
+                />
+              </div>
+              <div class="form-group">
+                <label
+                  style="
+                    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                    color: #17202a;
+                  "
+                  for="pass2"
+                  >Confrim Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="pass2"
+                  name="pass2"
+                  placeholder="Confirm Your Password Here..."
+                />
+              </div>
+
+              {% csrf_token %}
+              <button
+                style="
+                  font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                "
+                type="submit"
+                class="btn btn-outline-dark"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="loginModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5
+              style="
+                font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                color: #17202a;
+              "
+              class="modal-title"
+              id="loginModalTitle"
+            >
+              Papyrus Login
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="/login/" method="post">
+              <div class="form-group">
+                <label
+                  style="
+                    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                    color: #17202a;
+                  "
+                  for="username"
+                  >Username</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="loginusername"
+                  name="loginusername"
+                  placeholder="Enter Your Username Here..."
+                />
+              </div>
+              <div class="form-group">
+                <label
+                  style="
+                    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                    color: #17202a;
+                  "
+                  for="pass"
+                  >Enter Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="loginpassword"
+                  name="loginpassword"
+                  placeholder=" Enter Your Password Here..."
+                />
+              </div>
+              {% csrf_token %}
+              <button type="submit" class="btn btn-outline-dark">Submit</button>
+              <h1></h1>
+              <h6>Dont have an account?</h6>
+              <li class="nav-item dropdown">
+                <a
+                  style="
+                    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                  "
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Signup
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a
+                    style="
+                      font-family: Georgia, 'Times New Roman', Times, sans-serif;
+                    "
+                    class="dropdown-item"
+                    data-toggle="modal"
+                    data-target="#signupModal"
+                    >Signup</a
+                  >
+                </div>
+              </li>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% if user.is_authenticated %}
+    <ul class="navbar-nav mr-2 ml-auto">
+      <li class="nav-item dropdown">
+        <a
+          style="
+            font-family: Georgia, 'Times New Roman', Times, sans-serif;
+            color: orange;
+          "
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Welcome {{request.user}}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <form method="get" action="/dashboard/">
+            <input
+              type="hidden"
+              name="usertracker"
+              id="usertracker"
+              value="{{request.user}}"
+            />
+            <button type="submit" style="background-color: white; border: none">
+              Dashboard
+            </button>
+        
+          </form>
+          <div class="dropdown-divider"></div>
+          <a
+            style="
+              font-family: Georgia, 'Times New Roman', Times, sans-serif;
+              color: blue;
+            "
+            class="dropdown-item"
+            href="/logout"
+            >Logout</a
+          >
+        </div>
+      </li>
+    </ul>
+
+    {% else %}
+    <!-- Button to trigger Login modal -->
+    <li class="nav-item dropdown">
+      <a
+        class="nav-link dropdown-toggle"
+        href="#"
+        id="navbarDropdown"
+        role="button"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Login
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="/admin">Admin</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" data-toggle="modal" data-target="#loginModal"
+          >User</a
+        >
+        <div class="dropdown-divider"></div>
+        <a sclass="dropdown-item" data-toggle="modal" data-target="#signupModal"
+          >Signup</a
+        >
+      </div>
+    </li>
+    {% comment %}
+    <!-- Button to trigger Signup modal -->
+    <li class="nav-item dropdown">
+      <a
+        class="nav-link dropdown-toggle"
+        href="#"
+        id="navbarDropdown"
+        role="button"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Signup
+      </a>
+    </li>
+    {% endcomment %} 
+    {% endif %}
+
+    <a class="dropdown-item" data-toggle="modal" data-target="#loginModal"
+      >User</a
+    >
+
+    <a sclass="dropdown-item" data-toggle="modal" data-target="#signupModal"
+      >Signup</a
+    >
+    <center>
+      <form action="/db/" method="post">
+        {% csrf_token %}
+        <h1
+          style="
+            font-size: 50px;
+            background-color: rgb(85, 88, 102);
+            color: white;
+          "
+        >
+          <b>বিটলির ছোটভাই</b>
+        </h1>
+        <br /><br /><br /><br />
+        <label for="fname">Link: </label>
+        <br /><br /><input
+          class="textBox"
+          type="text"
+          id="linksub"
+          name="linksub"
+          placeholder="Submit the link here"
+        /><br />
+
+        <input type="submit" value="shorten" name="shorten" /><br /><br />
+      </form>
+      <p id="p1">{{id}}</p>
+
+      <button onclick="copyToClipboard('#p1')">Copy TEXT</button>
+      <form action="/is/" method="post">
+        {% csrf_token %}
+
+        <br /><br /><input
+          class="textBox"
+          type="text"
+          id="isearch"
+          name="isearch"
+          placeholder="Dont belive me?..TEST it here..;)"
+        />
+        <br />
+        <input type="submit" value="search" name="search" />
+      </form>
+      <br /><br /><br /><br />
+      <h1 style="font-size: 30px; color: rgb(0, 11, 51)">
+        <b>We can store 14,776,336 urls.</b>
+      </h1>
+    </center>
+
+    <script>
+      function copyToClipboard(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+      }
+    </script>
+  </body>
+</html>
