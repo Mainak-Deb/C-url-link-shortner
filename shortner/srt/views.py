@@ -9,7 +9,7 @@ from math import ceil
 # import the logging library
 import logging
 import json
-from .models import Slink,Ulink,Clink
+from .models import Slink,Ulink,Clink,Contact
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
@@ -322,3 +322,15 @@ def customdashboard(request):
    except:
        return render(request, 'error.html')
 
+def contact(request):
+   try:
+    if request.method=="POST":        
+        mail= request.POST.get('mail', '')
+        messege=request.POST.get('messege', '')
+        sms = Contact( mail=mail,messege=messege)
+        sms.save()
+        messages.success(request,"Your messege send to our management team")
+        return render(request,  'premium.html')
+    return render(request,  'premium.html')
+   except:
+       return render(request, 'error.html')

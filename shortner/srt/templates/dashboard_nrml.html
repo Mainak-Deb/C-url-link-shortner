@@ -208,6 +208,7 @@
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  text-align: center;
   z-index: 1;
 }
 
@@ -762,15 +763,15 @@ footer .form-control {
               <hr>
           </div>
           <div class="col-md-5">
-              <form>
+              <form   action="/contact/" method="post"> {% csrf_token %}
                   <fieldset class="form-group">
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                      <input type="email" class="form-control" id="mail" name="mail" placeholder="Enter email">
                   </fieldset>
                   <fieldset class="form-group">
-                      <textarea class="form-control" id="exampleMessage" placeholder="Message"></textarea>
+                      <textarea class="form-control"  id="messege" name="messege"  placeholder="Message"></textarea>
                   </fieldset>
                   <fieldset class="form-group text-xs-right">
-                      <button type="button" class="sendbutton"   >Send</button>
+                      <button   type="submit"  class="sendbutton"   >Send</button>
                   </fieldset>
               </form>
           </div>

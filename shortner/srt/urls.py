@@ -18,6 +18,6 @@ urlpatterns = [
     path("db3/", views.cshort, name="short"),
     path("c/<str:lk>/", views.csearch, name="search"),
     path("cs/", views.cinsearch, name="insearch"),
-    path("customdashboard/", views.customdashboard, name="customdashboard"),
-   
+    path("contact/", views.contact, name="contact"),
+
 ]
